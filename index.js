@@ -104,7 +104,7 @@ module.exports["plugin"] = function (opts, bs) {
         if (!data.active) {
             msg = "{yellow:Disabled";
         } else {
-            clients.emit("browser:reload");
+            // clients.emit("browser:reload");
         }
 
         logger.info(msg);
@@ -246,8 +246,8 @@ module.exports["plugin"] = function (opts, bs) {
                             clients.emit(config.CLIENT_EVENT, task);
                         });
                     } else {
-                        debug("0 tasks returned, reloading instead");
-                        clients.emit("browser:reload");
+                        // debug("0 tasks returned, reloading instead");
+                        // clients.emit("browser:reload");
                     }
                 }
             });
